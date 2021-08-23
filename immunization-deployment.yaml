@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: immunization-deployment
+  namespace: divoc
+  labels:
+    app: immunization
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: immunization
+  template:
+    metadata:
+      labels:
+        app: immunization
+    spec:
+      containers:
+      - name: immunization 
+        image: dockerhub/opensaber-rc
+        ports:
+        - containerPort: 8081
+        env:
+        - name: connectionInfo_password
+          value: postgres
+        - name: connectionInfo_uri
+          value: jdbc:postgresql://172.31.25.17:5432/postgres
+        - name: connectionInfo_username
+          value: postgres
+        volumeMounts:
+        - name: schema-config-volume
+          mountPath: "/home/opensaber/config/public/_schemas"
+          readOnly: true
+      volumes:
+      - name: schema-config-volume
+        projected:
+          sources:
+          - secret:
+              name: schema-config
+      #   volumeMounts:
+      #   - mountPath: /home/opensaber/config/public/_schemas
+      #     name: schema-config
+      # volumes:
+      # - name: schema-config
+      #   hostPath:
+      #     path: /tmp/immunization
+      #     type: Directory
+      
+
