@@ -70,35 +70,43 @@
       "type": "object",
       "properties": {
         "vaccineName": {
+          "$id": "#/properties/vaccineName",
           "type": "string",
           "title": "Vaccine Name"
         },
         "authorisationId": {
+          "$id": "#/properties/authorisationId",
           "type": "string",
           "title": "Vaccine Authorisation Id"
         },
         "manufacturerName": {
+          "$id": "#/properties/manufacturerName",
           "type": "string",
           "title": "Manufacturer Name"
         },
         "hospitalName": {
+          "$id": "#/properties/hospitalName",
           "type": "string",
           "title": "Hospital Name"
         },
         "practitionerName": {
+          "$id": "#/properties/practitionerName",
           "type": "string",
           "title": "Medical Practitioner/ Vaccinator name"
         },
         "vaccinationDate": {
+          "$id": "#/properties/vaccinationDate",
           "type": "string",
           "format": "date",
           "title": "Vaccination date"
         },
         "vaccinationCertificate": {
+          "$id": "#/properties/vaccinationCertificate",
           "type": "string",
           "title": "Vaccination certificate"
         },
         "childAge": {
+          "$id": "#/properties/childAge",
           "type": "integer",
           "title": "Age"
         }
