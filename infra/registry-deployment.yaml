@@ -57,13 +57,21 @@ spec:
             - name: filestorage_bucket_key
               value: immunization
           image: dockerhub/opensaber-rc:latest
+          volumeMounts:
+            - name: schema-config-volume
+              mountPath: "/home/opensaber/config/public/_schemas"
+              readOnly: true
           imagePullPolicy: Always
+          volumes:
+            - name: schema-config-volume
+                sources:
+                - secret:
+                    name: schema-config
           resources:
             requests:
               cpu: 500m
               memory: 2Gi
-#            limits:
-#              cpu: 500m
+
           name: registry
           ports:
             - containerPort: 8081
