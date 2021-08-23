@@ -42,25 +42,11 @@
           "type": "string",
           "title": "Full name of dean"
         },
-        "registration": {
-          "type": "object",
-          "properties": {
-            "board": {
-              "type": "string",
-              "title": "Board"
-            },
-            "grantYear": {
-              "type": "string",
-              "title": "Board Granted year"
-            },
-            "expiryYear": {
-              "type": "string",
-              "title": "Board Expiry year"
-            },
-            "registration number": {
-              "type": "string",
-              "title": "Board registration number"
-            }
+        "registrations": {
+          "type": "array",
+          "title": "Registration Details",
+          "items": {
+            "$ref": "Common.json/#/definitions/RegistrationDetails"
           }
         }
       }

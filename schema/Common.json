@@ -66,6 +66,27 @@
         }
       }
     },
+    "RegistrationDetails": {
+      "type": "object",
+      "properties": {
+        "board": {
+          "type": "string",
+          "title": "Board"
+        },
+        "grantYear": {
+          "type": "string",
+          "title": "Board Granted year"
+        },
+        "expiryYear": {
+          "type": "string",
+          "title": "Board Expiry year"
+        },
+        "registration number": {
+          "type": "string",
+          "title": "Board registration number"
+        }
+      }
+    },
     "ImmunizationDetails": {
       "type": "object",
       "properties": {
@@ -124,14 +145,6 @@
           "$id": "#/properties/relation",
           "type": "string",
           "title": "Guardian Relation type"
-        }
-      }
-    },
-    "Document": {
-      "type": "object",
-      "properties": {
-        "fileName": {
-          "type": "string"
         }
       }
     },
