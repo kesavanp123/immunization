@@ -27,45 +27,10 @@
         },
         "immunizations": {
           "type": "array",
+          "title": "Immunizations Details",
           "items": {
-            "type": "object",
-            "properties": {
-              "vaccineName": {
-                "type": "string",
-                "title": "Vaccine Name"
-              },
-              "authorisationId": {
-                "type": "string",
-                "title": "Vaccine Authorisation Id"
-              },
-              "manufacturerName": {
-                "type": "string",
-                "title": "Manufacturer Name"
-              },
-              "hospitalName": {
-                "type": "string",
-                "title": "Hospital Name"
-              },
-              "practitionerName": {
-                "type": "string",
-                "title": "Medical Practitioner/ Vaccinator name"
-              },
-              "vaccinationDate": {
-                "type": "string",
-                "format": "date",
-                "title": "Vaccination date"
-              },
-              "vaccinationCertificate": {
-                "type": "string",
-                "title": "Vaccination certificate"
-              },
-              "childAge": {
-                "type": "integer",
-                "title": "Age"
-              }
-            }
-          },
-          "title": "Immunizations Details"
+            "$ref": "Common.json/#/definitions/ImmunizationDetails"
+          }
         },
         "guardianDetails": {
           "$ref": "Common.json/#/definitions/GuardianDetails",

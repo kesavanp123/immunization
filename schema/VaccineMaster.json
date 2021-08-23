@@ -74,12 +74,12 @@
         },
         "manufacturer": {
           "type": "array",
+          "title": "Manufacturer Name",
           "items": {
             "type": "object",
             "properties": {
               "manufacturerName": {
-                "type": "string",
-                "title": "Manufacturer Name"
+                "type": "string"
               }
             }
           }
