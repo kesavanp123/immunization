@@ -42,7 +42,7 @@
           "type": "string",
           "title": "Full name of dean"
         },
-        "registrations": {
+        "registrationDetails": {
           "type": "array",
           "title": "Registration Details",
           "items": {

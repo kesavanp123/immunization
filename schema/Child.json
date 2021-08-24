@@ -25,7 +25,7 @@
         "contactDetails": {
           "$ref": "Common.json/#/definitions/ContactDetails"
         },
-        "immunizations": {
+        "immunizationDetails": {
           "type": "array",
           "title": "Immunizations Details",
           "items": {
