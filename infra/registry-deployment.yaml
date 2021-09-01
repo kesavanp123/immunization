@@ -42,6 +42,8 @@ spec:
               value: immunization-frontend
             - name: sunbird_sso_admin_client_secret
               value: 6adba94e-3535-4004-a6c9-99c25c607d3a
+            - name: internal_entities
+              value: Child, Hospital, Practitioner, VaccineMaster
             - name: claims_url
               value: http://claim-ms:8082
             - name: search_providerName
